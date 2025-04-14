@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&display=swap');
+
+:root {
+    --fonte-primaria: "Inter", sans-serif;
+    --fonte-secundaria: "Quicksand", sans-serif;
+    --preto: #000000ff;
+    --azul: rgb(194, 69, 69);
+    --vermelho: rgb(255, 55, 55);
+    --cinza: rgb(0, 0, 0);
+    --branco: #ffffffff;
+}
+
+boddy {
+    background-color: var(--cinza);
+    color: var(--preto);
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.titulo-principal {
+    font-family: var(--fonte-secundaria);
+    text-align: left;
+    width: 100%;
+    font-size: 36px;
+
+
+}
+
+.botao {
+    background-color: var(--azul);
+    color: var(--preto);
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    font-size: 18px;
+    align-items: center;
+    width: 100%;
+    border-bottom: 4px solid var(--vermelho);
+    border-left: 4px solid var(--vermelho);
+    border-right: 4px solid var(--vermelho);
+    border-top: none;
+}
+
+.botoes {
+    display: block;
+}
+
+.botao:first-child {
+    border-radius: 40px 40px 0 0;
+}
+
+.botao:last-child {
+    border-radius: 0 0 40px 40px;
+}
+
+.ativo {
+    background-color: var(--azul);
+    border-bottom: var(--vermelho);
+}
+
+@media screen and (min-width: 768px) {
+    .botoes {
+        display: flex;
+    }
+
+    .botao:first-child {
+        border-radius: 40px 0 0 0;
+    }
+
+    .botao:last-child {
+        border-radius: 0 40px 0 0;
+    }
+}
